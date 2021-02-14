@@ -22,15 +22,13 @@ window.addEventListener('DOMContentLoaded', () => {
       } 
       
       for (let i = 0; i < json.length; i++) {
-        
         if (cart.includes(json[i].id)) {
           status = 'Remove from Cart';
         }
         else {
           status = 'Add to Cart';
         }
-        productList.appendChild(new ProductItem(json[i].id, json[i].title,
-          json[i].price, json[i].image, status))
+        productList.appendChild(new ProductItem(json[i].id, json[i].title, json[i].price, json[i].image, status));
       }
     })
 });
